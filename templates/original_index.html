@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="echarts.min.js"></script>
+
+  <title> Employment of Data Analysts in Germany </title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="original_index.html"><span>A Data Analysis Report</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url('static/assets/img/slide/slide-1.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content container">
+                <h2 class="animated fadeInDown">Data Analysts <span>in Germany</span></h2>
+                <p class="animated fadeInUp">This is a report on the current state of employment of data analysts in Germany. The data was obtained from the German job search website: www.stepstone.de. 5000 data were obtained through a python program and being analyzed in different ways with different tools, in order to have a perspective of the job market in Germany as a Data Analyst.</p>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="mainpage">
+
+<!-- ======= About Lists Section ======= -->
+
+    <section class="about-lists">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+            <span></span>
+            <h4>Part 1</h4>
+            <p>Get an Overall Perspective of the Job Market.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+            <span></span>
+            <h4>Part 2 </h4>
+            <p> Who Are Employing? Know Your Bosses First!</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+            <span></span>
+            <h4> Part 3 </h4>
+            <p>Who Are Being Employed? Learn About The Required Qualifications! </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Lists Section -->
+
+     <!-- ======= Part 1 ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Part 1: Overall Perspective </h2>
+            <p>Judging by the number of posted job on Stepstone, it is not hard to conclude that there is a quite high demand for Data Analyst in german job market. Almost all of them offer permanent contacts and require full-time presence, although there is about 40% of chance that you can work from home.</p>
+        </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+ <!-- ======= part 1 table  ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 video-box">
+          <script src="static/assets/js/echarts.min.js"></script>
+          <div id="table1" class="table1" style="width:70%; float:left;">
+           <div id="dailypublishedjob" style="width: 800px;height:500px;">
+
+                <script type="text/javascript">
+                  // 基于准备好的dom，初始化echarts实例
+                  var myChart = echarts.init(document.getElementById('dailypublishedjob'));
+
+                  // 指定图表的配置项和数据
+                  var option = {
+                        title: { text: 'Number of Jobs Posted Daily on Stepstone' },
+                          tooltip: {
+                            trigger: 'axis'
+                          },
+                          legend: {
+                                orient: 'vertical',
+                                    x:'right',      //可设定图例在左、右、居中
+                                    y:'bottom',     //可设定图例在上、下、居中
+                                    padding:[0,100,100,0],   //可设定图例[距上方距离，距右方距离，距下方距离，距左方距离]
+                                data: ['Number of Jobs Posted Daily', 'Average Number of Jobs Posted in the Past Week']
+                              },
+                          xAxis: {
+                            type: 'category',
+                            data: ['08-11(Tue)', '08-12(Fri)', '08-13(Sat)', '08-14(Sun)', '08-15(Mon)', '08-16(Tue)', '08-17(Wen)'
+                            ]
+                          },
+                          yAxis: {
+                            type: 'value'
+                          },
+                          series: [
+                            {
+                              name: 'Number of Jobs Posted Daily',
+                              data: [376, 268, 136, 174, 335, 328, 365],
+                              type: 'line'
+                            },
+
+                            {
+                              name: 'Average Number of Jobs Posted in the Past Week',
+                              data: [283, 283, 283, 283, 283, 283, 283],
+                              type: 'line',
+
+                              lineStyle: {
+                                width: 2,
+                                type: 'dashed'
+                              }
+                            }
+                          ]
+                        };
+
+                        option && myChart.setOption(option);
+                </script>
+          </div>
+
+               <div class = "tablelegend" style="width:1000px">
+              <p>During the week that is being surveyed, there were an average of 283 job with the title "Data Analyst" posted on Stepstone. Of these, Friday,Saturday and Sunday have less postings, which are below 300. While from Monday to Thursday there are more than 300 Data Analyst job were posted every day.</p>
+          </div>
+
+               <!-- ======= Table 2  ======= -->
+          <div id="table2", class="table2">
+
+           <script src="static/assets/js/echarts.min.js"></script>
+           <div id="worktype" style="width: 800px;height:600px;">
+
+                <script type="text/javascript">
+                  // 基于准备好的dom，初始化echarts实
+
+                    var chartDom1 = document.getElementById('worktype');
+                    var myChart1 = echarts.init(chartDom1);
+                    var option1;
+
+                    option1 = {
+                      title: {
+                        text: 'Contract Type',
+                        left: 'left'
+                      },
+                      tooltip: {
+                        trigger: 'item'
+                      },
+                      legend: {
+                        orient: 'vertical',
+                        right: 'right',
+                        y: 'bottom'
+                      },
+                      series: [
+                        {
+                          name: 'Access From',
+                          type: 'pie',
+                          radius: '50%',
+                          data: [
+                            { value: 193, name: 'Student Job' },
+                            { value: 4376, name: 'Permanent Contract' },
+                            { value: 166, name: 'Fixed-Term Contract' },
+                            { value: 138, name: 'Internship' },
+                            { value: 73, name: 'Carrer Training(Berufseinstieg)' },
+                            { value: 58, name: 'Study Training(Ausbildung)' }
+                          ],
+                          emphasis: {
+                            itemStyle: {
+                              shadowBlur: 10,
+                              shadowOffsetX: 0,
+                              shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                          }
+                        }
+                      ]
+                    };
+
+                    option1 && myChart1.setOption(option1);
+
+                </script>
+               </div>
+
+          <div class = "tablelegend" style="width:1000px">
+              <p>Of the 5,000 jobs surveyed, 87.52% offered permanent contracts, 3% offered fix-term contacts, 9.24% offered contracts to students, including 3.86% of Student jobs and 1.16% of Ausbildung (a special kind of internship in Germany).The rest of 4.42% are offered for interns. </p>
+          </div>
+          </div>
+
+
+        <!-- ======= Table 3 Home Office ======= -->
+
+           <script src="static/assets/js/echarts.min.js"></script>
+           <div id="homeoffice" style="width: 800px;height:400px;">
+
+                <script type="text/javascript">
+                  // 基于准备好的dom，初始化echarts实例
+                    var chartDom2 = document.getElementById('homeoffice');
+                    var myChart2 = echarts.init(chartDom2);
+                    var option2;
+
+                    option2 = {
+                      title: {
+                        text: 'Home Office Friendly?',
+                        left: 'left'
+                      },
+                      legend: {
+                        top: 'bottom'
+                      },
+                      toolbox: {
+                        show: true,
+                        feature: {
+                          mark: { show: true },
+                          dataView: { show: true, readOnly: false },
+                          restore: { show: true },
+                          saveAsImage: { show: true }
+                        }
+                      },
+                      series: [
+                        {
+                          name: 'Nightingale Chart',
+                          type: 'pie',
+                          radius: [30, 150],
+                          center: ['50%', '50%'],
+                          roseType: 'area',
+                          itemStyle: {
+                            borderRadius: 8
+                          },
+                          data: [
+                            { value: 2000, name: 'YES! It is Possible!' },
+                            { value: 100, name: 'Absolute! We Recommend you to do so!' },
+                            { value: 2900, name: 'Opps, Not Sure that would work' }
+                          ]
+                        }
+                      ]
+                    };
+
+                    option2 && myChart2.setOption(option2);
+
+
+                </script>
+           </div>
+
+          <div class = "tablelegend" style="width:1000px">
+              <p>Of the 5,000 jobs surveyed, Of the 5,000 jobs surveyed, 40% of the positions are home office friendly, 2% even encourage you to do so, however 58% of the positions are not clear on whether they liked the idea of home office or not, but I suppose you could negotiate. </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Part 1 Table -->
+
+
+        <!-- ======= Part 2  ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Part 2:About Employer  </h2>
+            <p> In which industry are data analysts most popular? Where are the companies that employ data analysts located in Germany?</p>
+        </div>
+        </div>
+
+      </div>
+    </section><!-- End Part 2 Introduction -->
+
+
+ <!-- ======= Part 2 Table  ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 video-box">
+            <script src="static/assets/js/echarts.min.js"></script>
+           <div id="echarts04" style="width: 1000px;height:500px;">
+
+                <script type="text/javascript">
+                  // 基于准备好的dom，初始化echarts实例
+
+                    var chartDom4 = document.getElementById('echarts04');
+                        var myChart4 = echarts.init(chartDom4);
+                        var option4;
+
+                        // prettier-ignore
+                        let dataAxis = ['IT: DataBank Development and Data Warehouse', 'IT: Software Development', 'IT: Consulting ', 'IT: Business Informatics', 'Finance: Business Analaysis', 'Finance: Controlling', 'Engineer:Eletrotechnology and Quality Management', 'Team Managemnt', 'Business Development','Marketing: Productmanagement', 'Marketing: Online-Marketing', 'Marketing:Market Research', 'Bank and Insurance', 'Science and Research'];
+                        // prettier-ignore
+                        let data = [868, 582, 434, 412, 315, 206, 194, 315, 283,153, 250, 277, 125, 220];
+                        let yMax = 500;
+                        let dataShadow = [];
+                        for (let i = 0; i < data.length; i++) {
+                          dataShadow.push(yMax);
+                        }
+                        option4 = {
+                          title: {
+                            text: 'The Need for Data Analysts in Different Industries',
+                            subtext: ' Click to Zoom'
+                          },
+                          xAxis: {
+                            data: dataAxis,
+                            axisLabel: {
+                              position: 'insidebottom',
+                              rotate: 90,
+                              inside: true,
+                              color: '#fff00',
+                              show: true
+                            },
+                            axisTick: {
+                              show: true
+                            },
+                            axisLine: {
+                              show: true
+                            },
+                            z: 10
+                          },
+                          yAxis: {
+                            axisLine: {
+                              show: true
+                            },
+                            axisTick: {
+                              show: true
+                            },
+                            axisLabel: {
+                              color: '#999'
+                            }
+                          },
+                          dataZoom: [
+                            {
+                              type: 'inside'
+                            }
+                          ],
+                          series: [
+                            {
+                              type: 'bar',
+                              showBackground: true,
+                              itemStyle: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                  { offset: 0, color: '#83bff6' },
+                                  { offset: 0.5, color: '#188df0' },
+                                  { offset: 1, color: '#188df0' }
+                                ])
+                              },
+                              emphasis: {
+                                itemStyle: {
+                                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                    { offset: 0, color: '#2378f7' },
+                                    { offset: 0.7, color: '#2378f7' },
+                                    { offset: 1, color: '#83bff6' }
+                                  ])
+                                }
+                              },
+                              data: data
+                            }
+                          ]
+                        };
+                        // Enable data zoom when user click bar.
+                        const zoomSize = 6;
+                        myChart4.on('click', function (params) {
+                          console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+                          myChart4.dispatchAction({
+                            type: 'dataZoom',
+                            startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+                            endValue:
+                              dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+                          });
+                        });
+
+                        option4 && myChart4.setOption(option4);
+                    </script>
+          </div>
+
+            <div class = "tablelegend" style="width:1000px">
+              <p>There is always a place for data analysts in many industries, but of course, it is still the IT industry that holds the overwhelming majority of positions. Among the most in-demand positions in the IT industry are, database development and management, software development, consulting, and business informatics. The second-ranked industry is finance, which includes business analysis and control. Then followed by some engineering management involving technology, as well as marketing analysis, team management, banking and insurance, and research in universities, etc. </p>
+          </div>
+
+               <!-- ======= Table 2  ======= -->
+          <div id="table2", class="table2">
+              <h4> Geographical distribution of jobs in Germany </h4>
+
+             <script src="static/assets/js/echarts.min.js"></script>
+           <div id="echarts05" style="width: 1000px;height:600px;">
+        <div class="container3">
+            <img src="static/assets/img/map.png" style="height: 500px;">
+            <div class = "tablelegend" style="width:1000px">
+              <p>The most popular cities for data analysts in Germany are, Munich, Stuttgart, Frankfurt(am Main), Berlin, Köln, Hamburg, of course, no surprise, the big cities. </p>
+          </div>
+
+           </div>
+        </div>
+
+      </div>
+    </section><!-- End Part 2 table -->
+
+ <!-- ======= Part 3 ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Part 3: Employment  </h2>
+            <p>Who are being hired? What are the required skills to become a data analyst? How is the salary distribution like?</p>
+        </div>
+        </div>
+
+      </div>
+    </section><!-- End part 3 introduction session -->
+
+
+ <!-- ======= part 3 table  ======= -->
+    <section id="about" class="about">
+      <div class="container">
+          <h4> Required Skills </h4>
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 video-box">
+          <script src="static/assets/js/echarts.min.js"></script>
+           <div id="echarts_q" style="width: 1000px; height:500px;">
+                 <script type="text/javascript">
+                     var chartDom_q = document.getElementById('echarts_q');
+                    var myChart_q = echarts.init(chartDom_q);
+                    var option_q;
+
+                    var data_q = [
+                      {
+                        name: 'Professionals',
+                        children: [
+                          {
+                            name: 'Tech',
+                            value: 10,
+                            children: [
+                              {
+                                name: 'Development',
+                                value: 2
+                              },
+                              {
+                                name: 'Softwares',
+                                value: 5,
+                                children: [
+                                  {
+                                    name: 'Python',
+                                    value: 1
+                                  },
+                                  {
+                                    name: 'SQL',
+                                    value: 1
+                                  },
+                                  {
+                                    name: 'Excel',
+                                    value: 1
+                                  },
+                                  {
+                                    name: 'MS Office',
+                                    value: 1
+                                  },
+                                  {
+                                    name: 'Clouds',
+                                    value: 1
+                                  }
+                                ]
+                              },
+                              {
+                                name: 'Studies',
+                                value: 4,
+                                children: [
+                                  { name: 'Math', value: 1 },
+                                  { name: 'Computer Science', value: 1 },
+                                  { name: 'Economic', value: 1 },
+                                  { name: 'Statistic', value: 1 }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            name: 'Business',
+                            value: 10,
+                            children: [
+                              {
+                                name: 'Planning',
+                                value: 2
+                              },
+                              {
+                                name: 'Managment',
+                                value: 3
+                              },
+                              {
+                                name: 'Customer Oriented',
+                                value: 2
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        name: 'Softskills',
+                        children: [
+                          {
+                            name: 'Communication',
+                            children: [
+                              { name: 'English', value: 1 },
+                              { name: 'German', value: 2 }
+                            ]
+                          },
+                          {
+                            name: 'Personality traits',
+                            children: [
+                              { name: 'Flexible', value: 1 },
+                              { name: 'Analytical', value: 2 },
+                              { name: 'Result Oriented', value: 1 }
+                            ]
+                          }
+                        ]
+                      }
+                    ];
+                    option_q = {
+                      series: {
+                        type: 'sunburst',
+                        // emphasis: {
+                        //     focus: 'ancestor'
+                        // },
+                        data: data_q,
+                        radius: [0, '90%'],
+                        label: {
+                          rotate: 'radial'
+                        }
+                      }
+                    };
+
+                    option_q && myChart_q.setOption(option_q);
+
+                 </script>
+          </div>
+
+            <div class = "tablelegend" style="width:1000px">
+              <p>Becoming a data analyst requires professional skills, as well as some soft skills. The profession includes both technical and business aspects. On the technical aspect, first, a university degree related to mathematics, computer science and economics are required, and a mastery of software related skills such as python, SQL, MS Office, etc. is also very necessary. For the soft skills, fluency in German and English will give you a big advantage in the competition, and a flexible personality and an analytical mind will give you more chances to get hired. </p>
+          </div>
+
+               <!-- ======= Table 2  ======= -->
+
+          <!--  table 2 salary-->
+
+      <div class="container2">
+
+           <div id="img" style="width: 1000px;height:500px;">
+        <div class="container3">
+            <img src="static/assets/img/salary.png" style="height: 500px;">
+            <div class = "tablelegend" style="width:1000px">
+              <p>We divided the data analyst jobs into three categories according to their industries, IT, finance and Engineering and Technology.The data analysts in Finance have the highest average salaries, but their salaries also have a greater range of variation, the second highest average salary is in Engineering and Technology. The data analysts in the IT category have the lowest average salary, but also the smallest range of variation.</p>
+          </div>
+          </div>
+
+            <div id="img2" style="width: 1000px;height:1200px;">
+                <h4> Wordcloud of the Job Description </h4>
+        <div class="container4">
+            <img src="static/assets/img/wc_1.png" style="width: 50%; height: 500px; float: left; border=0;">
+            <img src="static/assets/img/wc_2.png" style="width:50%; height: 500px; float: left; border=0;">
+                <div class = "tablelegend" style="width:1000px">
+              <p>After analyzing the 5,000 job descriptions obtained, we extracted the most important keywords using a word cloud and obtained two reports.
+                The left one stands for all the required skills in 5000 descriptions of the job positions, you can see that a degree of business, computer science are very important, as well as German, English are also highly demanded skills. The wordcloud on the right stands for the skills required for the Data Analyst whose salary are higher than 100,000€/year. As we can see, data analysts with salaries higher than 100,000 are required for more abstract competencies such as experience and leadership. </p>
+          </div>
+          </div>
+
+        </div>
+           </div>
+      </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End Part 3 Table -->
+
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
